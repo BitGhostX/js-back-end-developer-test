@@ -1,0 +1,556 @@
+{
+	"info": {
+		"_postman_id": "23b936ea-7c13-4e4a-907c-e7fa8363cc6b",
+		"name": "Back End Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4536821",
+		"_collection_link": "https://restless-escape-587557.postman.co/workspace/Team-Workspace~7f55a7fa-b49d-4159-8dc7-1431d6db191b/collection/4536821-23b936ea-7c13-4e4a-907c-e7fa8363cc6b?action=share&source=collection_link&creator=4536821"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "filter-products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/products/?name=asus&category=era&price=0&price=100&page=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"products",
+										""
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "asus"
+										},
+										{
+											"key": "category",
+											"value": "era"
+										},
+										{
+											"key": "price",
+											"value": "0"
+										},
+										{
+											"key": "price",
+											"value": "100"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl --request GET \\\n  --url 'http://localhost:3000/api/v1/products/?name=asus&category=era&price=0&price=100&page=1'"
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/products/?name=asus&category=era&price=0&price=100&page=1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"products",
+												""
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "asus"
+												},
+												{
+													"key": "category",
+													"value": "era"
+												},
+												{
+													"key": "price",
+													"value": "0"
+												},
+												{
+													"key": "price",
+													"value": "100"
+												},
+												{
+													"key": "page",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "344"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"158-KoZgAV8aS09Z2jkLQxHTRQkSOQQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 Jan 2025 12:40:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"metaData\": {\n        \"total\": 1,\n        \"page\": 1,\n        \"count\": 1\n    },\n    \"data\": [\n        {\n            \"_id\": \"678f95475910993b464343bb\",\n            \"entryId\": \"4PZ08zGaLVuTSrXhEVUTjP\",\n            \"brand\": \"Asus\",\n            \"category\": \"Camera\",\n            \"color\": \"Gray\",\n            \"createdAt\": \"2024-01-23T21:44:53.805Z\",\n            \"currency\": \"USD\",\n            \"model\": \"X-T4\",\n            \"name\": \"Asus X-T4\",\n            \"price\": 53.12,\n            \"sku\": \"E7OZIKB4\",\n            \"stock\": 160,\n            \"updatedAt\": \"2024-01-23T21:44:53.805Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "delete-by-id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/products/6LdBWv3rsKHP5ghFdYzCH8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"6LdBWv3rsKHP5ghFdYzCH8"
+									]
+								},
+								"description": "Generated from cURL: curl --request DELETE \\\n  --url http://localhost:3000/api/v1/products/4PZ08zGaLVuTSrXhEVUTjP"
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/products/6LdBWv3rsKHP5ghFdYzCH8",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"products",
+												"6LdBWv3rsKHP5ghFdYzCH8"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "38"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 Jan 2025 12:42:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"acknowledged\": true,\n    \"deletedCount\": 1\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "reports",
+					"item": [
+						{
+							"name": "first-report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJKb25hdGhhbiBBcmFuY2liaWEiLCJpYXQiOjE3ODk4MDk3MTh9.oU53fWEot-DDTsAFTI1xBjpKjk0HiIK_FAF-YMqcXJc"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/reports/first",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"reports",
+										"first"
+									]
+								},
+								"description": "Generated from cURL: curl --request GET \\\n  --url 'http://localhost:3000/api/v1/reports/first?=' \\\n  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJKb25hdGhhbiBBcmFuY2liaWEiLCJpYXQiOjE3ODk4MDk3MTh9.oU53fWEot-DDTsAFTI1xBjpKjk0HiIK_FAF-YMqcXJc'"
+							},
+							"response": [
+								{
+									"name": "http://localhost:3000/api/v1/reports/first?=",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJKb25hdGhhbiBBcmFuY2liaWEiLCJpYXQiOjE3ODk4MDk3MTh9.oU53fWEot-DDTsAFTI1xBjpKjk0HiIK_FAF-YMqcXJc"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/reports/first",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"reports",
+												"first"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "20"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"14-fJgbUQrbvBuzV/zBu+JnzNCRUB0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 Jan 2025 12:42:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"deletedPercent\": 1\n}"
+								}
+							]
+						},
+						{
+							"name": "second-report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJKb25hdGhhbiBBcmFuY2liaWEiLCJpYXQiOjE3ODk4MDk3MTh9.oU53fWEot-DDTsAFTI1xBjpKjk0HiIK_FAF-YMqcXJc"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/reports/second?price=0&price=800&date=2024-01-01&date=2024-01-25",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"reports",
+										"second"
+									],
+									"query": [
+										{
+											"key": "price",
+											"value": "0"
+										},
+										{
+											"key": "price",
+											"value": "800"
+										},
+										{
+											"key": "date",
+											"value": "2024-01-01"
+										},
+										{
+											"key": "date",
+											"value": "2024-01-25"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl --request GET \\\n  --url 'http://localhost:3000/api/v1/reports/second?price=0&price=800&date=2024-01-01&date=2024-01-25' \\\n  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJKb25hdGhhbiBBcmFuY2liaWEiLCJpYXQiOjE3ODk4MDk3MTh9.oU53fWEot-DDTsAFTI1xBjpKjk0HiIK_FAF-YMqcXJc'"
+							},
+							"response": [
+								{
+									"name": "http://localhost:3000/api/v1/reports/second?price=0&price=800&date=2024-01-01&date=2024-01-25",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJKb25hdGhhbiBBcmFuY2liaWEiLCJpYXQiOjE3ODk4MDk3MTh9.oU53fWEot-DDTsAFTI1xBjpKjk0HiIK_FAF-YMqcXJc"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/reports/second?price=0&price=800&date=2024-01-01&date=2024-01-25",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"reports",
+												"second"
+											],
+											"query": [
+												{
+													"key": "price",
+													"value": "0"
+												},
+												{
+													"key": "price",
+													"value": "800"
+												},
+												{
+													"key": "date",
+													"value": "2024-01-01"
+												},
+												{
+													"key": "date",
+													"value": "2024-01-25"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "58"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3a-S+YT052MYyulITmbpNXe2zyOEw0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 Jan 2025 12:43:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"inPriceRangePercent\": 43.43,\n    \"outPriceRangePercent\": 56.57\n}"
+								}
+							]
+						},
+						{
+							"name": "third-report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJKb25hdGhhbiBBcmFuY2liaWEiLCJpYXQiOjE3ODk4MDk3MTh9.oU53fWEot-DDTsAFTI1xBjpKjk0HiIK_FAF-YMqcXJc"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/reports/third",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"reports",
+										"third"
+									]
+								},
+								"description": "Generated from cURL: curl --request GET \\\n  --url http://localhost:3000/api/v1/reports/third \\\n  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJKb25hdGhhbiBBcmFuY2liaWEiLCJpYXQiOjE3ODk4MDk3MTh9.oU53fWEot-DDTsAFTI1xBjpKjk0HiIK_FAF-YMqcXJc'"
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJKb25hdGhhbiBBcmFuY2liaWEiLCJpYXQiOjE3ODk4MDk3MTh9.oU53fWEot-DDTsAFTI1xBjpKjk0HiIK_FAF-YMqcXJc"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/reports/third",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"reports",
+												"third"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "264"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"108-A3/FcHHMoi9VUMT3kxWh+ZIefy8\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 Jan 2025 12:44:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"_id\": \"HP\",\n        \"count\": 4\n    },\n    {\n        \"_id\": \"Dell\",\n        \"count\": 13\n    },\n    {\n        \"_id\": \"Sony\",\n        \"count\": 11\n    },\n    {\n        \"_id\": \"LG\",\n        \"count\": 6\n    },\n    {\n        \"_id\": \"Panasonic\",\n        \"count\": 9\n    },\n    {\n        \"_id\": \"Asus\",\n        \"count\": 12\n    },\n    {\n        \"_id\": \"Apple\",\n        \"count\": 14\n    },\n    {\n        \"_id\": \"Lenovo\",\n        \"count\": 7\n    },\n    {\n        \"_id\": \"Samsung\",\n        \"count\": 11\n    },\n    {\n        \"_id\": \"Acer\",\n        \"count\": 12\n    }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo
+    container_name: container-mongodb
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: username
+      MONGO_INITDB_ROOT_PASSWORD: password
+    networks:
+      - backend
+  nestjs:
+    container_name: container-nestjs
+    build: ./backend
+    command: bash -c 'while !</dev/tcp/mongodb/27017; do sleep 1; done; npm run start:prod'
+    restart: always
+    depends_on: 
+      - mongodb
+    links:
+      - mongodb
+    environment:
+      CONTENTFUL_SPACE_ID: 9xs1613l9f7v
+      CONTENTFUL_ACCESS_TOKEN: I-ThsT55eE_B3sCUWEQyDT4VqVO3x__20ufuie9usns
+      CONTENTFUL_ENVIRONMENT: master
+      CONTENTFUL_CONTENT_TYPE: product
+      CONTENTFUL_GET_ENTRIES_LIMIT: 20
+      MONGODB_URL: mongodb://username:password@mongodb:27017
+      GET_PRODUCTS_LIMIT: 5
+      JWT_SECRET: jwt_secret_string
+    ports:
+      - 3000:3000
+    networks:
+      - backend
+
+networks:
+  backend:
+    name: backend
